@@ -6,36 +6,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>I'am Thanh</title>
   <link rel="stylesheet" href="/resources/css/style.css">
+  <link rel="stylesheet" href="/resources/css/reponsive.css">
   <link rel="icon" href="https://global-uploads.webflow.com/61f25bf46b3218708480f622/61f2c8f71d6cf40ebd906b37_Logo.svg" type="image/x-icon">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
   integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
-<body>
+<body class="">
   <div class="container-header">
     <div class="container">
-      <div class="row">
-        <div class="wrapper-logo col-md-1">
-          <a href="#">
+      <div class="header-wrapper row">
+        <div class="wrapper-logo col-lg-1">
+          <a href="javascrip:void(0)">
             <img src="https://global-uploads.webflow.com/61f25bf46b3218708480f622/61f2c8f71d6cf40ebd906b37_Logo.svg" alt="">
           </a>
         </div>
-        <div class="offset-md-8"></div>
-        <div class="col-md-3 container-link-infor">
+        <div class="offset-lg-6"></div>
+        <div class="icon-mobile-tablet">
+          <i class="fa-solid fa-bars" id="btn-open"></i>
+          <i style="display: none;" class="fa-solid fa-xmark" id="btn-close"></i>
+        </div>
+        
+        <div class="col-lg-4 container-link-infor">
           <ul class="list-link-infor">
-            <li>
+            <li class="link-infor-item">
               <a href="https://www.facebook.com/thanhit.23/">
                 <i class="fa-brands fa-facebook"></i>
               </a>
+              <!-- <div class="modal-facebook">
+              </div> -->
             </li>
-            <li>
-              <a href="https://www.instagram.com/thanhit_203/">
+            <li class="link-infor-item">
+              <a href="https://www.instagram.com/thanhit_203/" role="link">
                 <i class="fa-brands fa-instagram"></i>
               </a>
             </li>
-            <li>
+            <li class="link-infor-item">
               <a href="https://github.com/thanhit23">
                 <i class="fa-brands fa-github"></i>
               </a>
+            </li>
+            <li class="link-eye-item">
+              <i class="fa-solid fa-eye"></i>
+              <span id="amount-eyes-see">985</span>
             </li>
           </ul>
         </div>
@@ -43,9 +55,58 @@
       </div>
     </div>
   </div>
+  <div class="modal-mobile" id="modal-mobile-infor">
+    <div class="d-flex flex-column">
+      <div class="profile">
+        <img src="/resources/img/ecb61cfc3b47f419ad56.jpg" alt="">
+        <h2 class="text-light">Nguyễn Duy Thành</h2>
+        <div class="social-links mt-3 text-center">
+          <a href="https://www.facebook.com/thanhit.23/">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/thanhit_203/">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://github.com/thanhit23">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="javascrip:void(0)">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+        </div>
+        <nav class="nav-menu navbar">
+          <ul>
+            <li>
+              <a href="javascrip:void(0)" class="nav-link">
+                <i class="fa-solid fa-house"></i>
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="javascrip:void(0)" class="nav-link">
+                <i class="fa-solid fa-user"></i>
+                About
+              </a>
+            </li>
+            <li>
+              <a href="javascrip:void(0)" class="nav-link">
+                <i class="fa-solid fa-laptop-code"></i>
+                Most Used Languages
+              </a>
+            </li>
+            <li>
+              <a href="javascrip:void(0)" class="nav-link">
+                <i class="fa-solid fa-envelope"></i>
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
   <div class="container-slider">
     <div class="wrapperslider">
-      <canvas id="canvas" style="height: 300px;min-width: 1440px;"></canvas>
     </div>
     <div class="wrapper-typing-effect">
       <p class="typing-effect-txt">
@@ -61,7 +122,7 @@
   <div class="container-information my-5">
     <div class="container">
       <div class="row">
-        <div class="container-infor col-md-4">
+        <div class="container-infor col-lg-4">
           <div class="wrapper-info">
             <div class="wrapper-avatar my-4">
               <img src="/resources/img/ecb61cfc3b47f419ad56.jpg" alt="">
@@ -73,7 +134,7 @@
               <div class="container-follower">
                 <a href="javascript:void(0)" class="link-follower">
                   <i class="fa-solid fa-user-group"></i>
-                  <span class="amount" id="amount-follower">1.999.999</span>
+                  <span class="amount" id="amount-follower">1.999.989</span>
                 </a>
                 <span id="follower">Followers</span>
                 <span id="un-follower" style="display: none;">Unfollower</span>
@@ -89,7 +150,7 @@
           </div>
         </div>
         <div class="offset-md-1"></div>
-        <div class="container-inf-pesonal col-md-7">
+        <div class="container-inf-pesonal col-lg-7">
           <div class="inf-pesonal-wrapper my-4">
             <div class="my-1">
               <i class="fa-solid fa-mars"></i>                
@@ -129,10 +190,10 @@
   <div class="container-skill">
     <div class="container container-my_skill mb-5">
       <div class="row">
-        <div class="col-md-12 my-2">
-          <h3>Most Used languages</h3>
+        <div class="title-wrapper-conten col-lg-12 my-2">
+          <h2>Most Used Languages</h2>
         </div>
-        <div class="container-skill col-md-12 my-2">
+        <div class="container-skill-list col-lg-12 my-2">
           <div class="my-skill-wrapper">
             <div class="progress">
               <div class="progress-bar" role="progressbar" style="width: 81.5%;background-color: #e34c26;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
@@ -170,10 +231,10 @@
             </div>
           </div>
         </div>
-        <!-- <div class="col-md-12">
+        <!-- <div class="col-lg-12">
           <h3>Có Thể Bạn Đã Biết Về Front-End</h3>
         </div>
-        <div class="container-learn col-md-12 my-2">
+        <div class="container-learn col-lg-12 my-2">
           <div class="learn-javascrip">
             <div class="">
               <h5>24 ĐOẠN CODE JAVASCRIPT ES6 HỮU DỤNG CHO FRONT-END DEV</h5>
@@ -193,23 +254,78 @@
       </div>
     </div>
   </div>
+  <div class="container-contact mb-5">
+    <div class="container">
+      <div class="row">
+        <div class="title-wrapper-conten col-lg-12 mb-3">
+          <h2>Contact</h2>
+        </div>
+        <div class="contact-wrapper col-lg-5">
+          <div class="contact-wrapper_email mb-3">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Email:</span>
+            <a href="mailto:duythanhit203@gmail.com">duythanhit203@gmail.com</a>
+          </div>
+          <div class="contact-wrapper_numberphone mb-3">
+            <i class="fa-solid fa-phone"></i>
+            <span>SĐT</span>
+            <a href="tel:096906736*">84+ 6906736*</a>
+          </div>
+          <div class="wrapper-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51346.90944731497!2d108.41683897125567!3d15.595516504086035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3169dd8bbaccdab7%3A0x7c9628779ba96153!2zMTXCsDM2JzQ4LjUiTiAxMDjCsDI1JzUzLjIiRQ!5e0!3m2!1sen!2s!4v1648435428790!5m2!1sen!2s" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="offset-md-1"></div>
+        <div class="form-contact-wrapper col-lg-6">
+            <div class="form-wrapper my-3">
+              <form action="javascrip:void(0)">
+                <div class="row container-form-infor">
+                  <div class="form-group col-md-6">
+                    <label for="">Your Name</label>
+                    <input type="text" name="name" class="form-control">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="">Your Email</label>
+                    <input type="text" name="email" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="">Subject</label>
+                  <input type="text" name="subject" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="">Message</label>
+                  <textarea class="form-control" name="message" id="" rows="10"></textarea>
+                </div>
+                <div class="btn-submit text-center">
+                  <button type="submit" class="submit">Send Message</button>
+                </div>
+              </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="container-footer">
     <div class="container">
       <div class="row">
-        <div class="container-copyright col-md-12">
-          <span class="my-3">
-            Copyright 
-            <a href="javascript:void(0)">@thanhit203</a>
-            Thank you for visiting my website
+        <div class="container-copyright col-lg-12">
+          <span class="txt-wrapper my-3">
+            <span>
+              Copyright
+              <a href="javascript:void(0)">@thanhit203</a>
+            </span> 
+            <span>Thank you for visiting my website</span>
           </span>
         </div>
       </div>
     </div>
   </div>
-  <script src="/resources/js/slider.js"></script>
+  <script src="/resources/js/reponsive.js"></script>
   <script src="/resources/js/main.js"></script>
   <script src="https://kit.fontawesome.com/5b900cdeed.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="/resources/js/security.js"></script>
+  <!-- <script src="/resources/js/security.js"></script> anti copy -->
 </body>
 </html>

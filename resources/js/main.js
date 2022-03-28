@@ -1,17 +1,50 @@
 const typingEffect = document.getElementById('txt');
-const followerBtn = document.getElementById('follower');
 const amountFollo = document.getElementById('amount-follower');
 const standBrick = document.getElementById('standing-brick');
+const followerBtn = document.getElementById('follower');
+const unFollowBtn = document.getElementById('un-follower');
+const getEyesSee = document.getElementById('amount-eyes-see');
+let getValueEyes = getEyesSee.innerHTML;
+
 // const txt = 'I\'m developer...';
 const fullName = 'developer...';
-const amountFollow = '1,999,999';
+const amountFollow = '1,999,988';
 const fullNameW = fullName.length;
 let countRemove = fullNameW;
 let countFollow = 0;
-let countStandBrick = 0
+let countStandBrick = 0;
 let valueFolow;
+let countEyesSee = 0;
 
 
+
+
+// function getValueFl() {
+//   document.getElementById('amount-follower').innerHTML;
+// } 
+
+function setValueFl(number) {
+  return document.getElementById('amount-follower').innerHTML = number
+}
+function stringFormat(number) {
+  return Number(number).toLocaleString("de-DE");
+}
+
+function removeStringFormat(number) {
+  return Number(number.replace(/,/g, ''));
+}
+
+function eyesSee() {
+  getEyesSee.innerHTML = '';
+  getValueEyes = Number(getValueEyes);
+  getValueEyes += countEyesSee;
+  getValueEyes = String(getValueEyes);
+  getEyesSee.innerHTML = getValueEyes;
+  countEyesSee = 1;
+}
+setInterval(eyesSee, 1000);
+
+let i = 0;
 function addWriter() {
   if (i < fullNameW) {
     typingEffect.innerHTML += fullName.charAt(i);
@@ -47,23 +80,6 @@ function removeWriter() {
   setTimeout(removeWriter, 200);
 }
 
-function getValue() {
-  document.getElementById('amount-follower').innerHTML;
-} 
-
-function setValueFl(number) {
-  return document.getElementById('amount-follower').innerHTML = number
-}
-function stringFormat(number) {
-  return Number(number).toLocaleString("de-DE");
-}
-
-function removeStringFormat(number) {
-  return Number(number.replace(/,/g, ''));
-}
-
-const unFollowBtn = document.getElementById('un-follower');
-
 
 followerBtn.addEventListener('click', function () {
   countFollow += 1;
@@ -84,3 +100,14 @@ unFollowBtn.addEventListener('click', function () {
   followerBtn.style.display = 'inline-block';
   unFollowBtn.style.display = 'none';
 });
+
+let countAutoFoll = 0;
+function autoIncreaseFl() {
+  countAutoFoll++;
+  amountFollo.innerHTML = '';
+  valueFolow = removeStringFormat(amountFollow);
+  valueFolow += countAutoFoll;
+  setValueFl(stringFormat(valueFolow));
+}
+
+setInterval(autoIncreaseFl, 5000)

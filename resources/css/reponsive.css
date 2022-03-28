@@ -1,0 +1,74 @@
+/* Mobile: width < 740px */
+@media only screen and (max-width: 739px) {
+  body {
+    position: relative;
+  }
+  .wrapper-logo img {
+    width: 25px;
+  }
+  .header-wrapper {
+    flex-wrap: nowrap !important;
+  }
+  .wrapper-logo {
+    display: inline-block;
+  }
+  .container-link-infor {
+    display: none;
+  }
+  .container-infor {
+    margin-bottom: 20px;
+  }
+  .icon-mobile-tablet {
+    display: block;
+  }
+  #modal-mobile-infor {
+    left: -300px;
+  }
+  /* .modal-mobile {
+    display: block;
+  } */
+
+  
+
+
+  .container-information,
+  .container-contact,
+  .container-skill {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .container-following,
+  .container-follower {
+    font-size: 13px;
+  }
+  .title-wrapper-conten h2 {
+    font-size: 1.5rem;
+  }
+  .contact-wrapper_email span,
+  .contact-wrapper_numberphone span {
+    font-size: 1rem;
+    margin: 0 5px;
+  }
+  .txt-wrapper {
+    font-size: 12px;
+  }
+  .contact-wrapper {
+    margin-bottom: 20px;
+  }
+
+}
+
+/* Tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 740px) and (max-width: 1023px)  {
+  #modal-mobile-infor {
+    left: -300px;
+  }
+}
+
+/* PC: width > 1024px */
+@media only screen and (min-width: 1024px) {
+  #modal-mobile-infor {
+    left: -300px;
+  }
+}
